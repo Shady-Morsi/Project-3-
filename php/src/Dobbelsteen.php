@@ -1,5 +1,6 @@
 <?php
-class dobbelstenen {
+namespace Project3;
+class Dobbelsteen {
 
     public $number;
 

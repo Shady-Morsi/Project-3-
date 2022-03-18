@@ -1,3 +1,17 @@
+<?php
+
+require_once 'vendor/autoload.php';
+
+session_start();
+
+use Project3\Play;
+use Project3\Game;
+use Project3\GameList;
+
+if(isset($_SESSION['play'])){
+    $play = $_SESSION['play'];
+}
+?>
 <!doctype HTML>
 <html lang="nl" class="h-100">
 <head>
@@ -62,7 +76,12 @@
 
 <?php
 
-if(isset($_POST['name'])){
+if(isset($_POST['dice'])){
+    $game = new Game($_POST['dice']);
+    $play->addGame($game);
+}
+elseif(isset($_POST['name'])){
+    $play->setPlayerName($_POST['name']);
 ?>
 <form action="" method="post">
     <div class="mb-3">
@@ -73,6 +92,8 @@ if(isset($_POST['name'])){
 </form>
 <?php
 }elseif(isset($_POST['start'])) {
+    $play = new Play();
+    $_SESSION['play'] = $play;
     ?>
     <form action="" method="post">
 
@@ -90,7 +111,9 @@ if(isset($_POST['name'])){
     </form>
 <?php
 }
-
+echo '<pre>';
+var_dump($play);
+exit();
 ?>
 <footer class="footer mt-auto py-3 bg-light">
     <div class="container">
