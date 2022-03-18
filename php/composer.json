@@ -1,7 +1,7 @@
 {
   "autoload": {
     "psr-4": {
-      "php\\": "classes"
+      "Project3\\": "src"
     }
   }
 }
