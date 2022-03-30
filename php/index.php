@@ -19,7 +19,7 @@ if(isset($_SESSION['play'])){
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Wakken, Ijsberen en Pinguins</title>
-    <!-- Bootstrap core CSS -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <style>
@@ -40,7 +40,6 @@ if(isset($_SESSION['play'])){
             }
         }
     </style>
-
 
     <!-- Custom styles for this template -->
     <link href="sticky-footer-navbar.css" rel="stylesheet">

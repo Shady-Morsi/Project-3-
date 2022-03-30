@@ -8,11 +8,13 @@ class HintList{
     }
 
     public function getHint(){
-
+        return $this->hints;
     }
 
     public function getRandomHint(){
-
+        $amountOfHints = count($this->hints);
+        $position = rand(0, $amountOfHints-1);
+        return $this->hints[$position];
     }
 }
 ?>

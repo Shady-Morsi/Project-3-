@@ -2,7 +2,13 @@
 namespace Project3;
 class Dobbelsteen {
 
+    private $iceHoles;
+    private $polarBears;
+    private $penguins;
     public $number;
+
+
+
 
     public function roll(){
         $this->number = rand(1,6);

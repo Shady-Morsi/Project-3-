@@ -9,7 +9,7 @@ class diceList{
     }
 
     public function getDices(){
-
+        return $this->dobbelstenen;
     }
 }
 ?>

@@ -8,11 +8,11 @@ class GameList{
     }
 
     public function getGame(){
-
+        return $this->games;
     }
 
     public function getCurrentGame(){
-
+        return end($this->games);
     }
 }
 ?>
