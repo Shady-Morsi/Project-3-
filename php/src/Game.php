@@ -2,6 +2,10 @@
 namespace Project3;
 class Game{
     private DiceList $diceList;
+    private wrong $wrong;
+    private correct $correct;
+    private TurnList $turnList;
+
 
     public function __construct($amount)
     {
@@ -12,5 +16,7 @@ class Game{
             $this->diceList->addDice($dobbelsteen);
         }
     }
+
+
 }
 ?>
