@@ -1,5 +1,5 @@
 <?php
-
+namespace Project3;
 class HintList{
     private array $hints = [];
 
