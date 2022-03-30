@@ -7,5 +7,9 @@ class diceList{
     public function addDice(Dobbelsteen $dobbelsteen){
         $this->dobbelstenen[] = $dobbelsteen;
     }
+
+    public function getDices(){
+
+    }
 }
 ?>

@@ -6,7 +6,7 @@ session_start();
 
 use Project3\Play;
 use Project3\Game;
-use Project3\GameList;
+
 
 if(isset($_SESSION['play'])){
     $play = $_SESSION['play'];
@@ -19,7 +19,6 @@ if(isset($_SESSION['play'])){
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Wakken, Ijsberen en Pinguins</title>
-
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -65,12 +64,10 @@ if(isset($_SESSION['play'])){
         </div>
     </nav>
 </header>
-
 <!-- Begin page content -->
 <main class="flex-shrink-0">
     <div class="container">
         <h1 class="mt-5">Wakken en Ijsberen</h1>
-
     </div>
 </main>
 

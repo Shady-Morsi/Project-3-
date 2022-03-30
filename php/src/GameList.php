@@ -6,5 +6,13 @@ class GameList{
     public function addGame(Game $game){
         $this->games[] = $game;
     }
+
+    public function getGame(){
+
+    }
+
+    public function getCurrentGame(){
+
+    }
 }
 ?>
