@@ -6,6 +6,7 @@ class Turn{
     private int $guessPolarBears;
     private int $guessPenguins;
 
+
     public function __construct(int $guessIceHoles = 2, int $guessPolarBears = 5, int $guessPenguins = 6){
         $this->guessIceHoles = $guessIceHoles;
         $this->guessPolarBears = $guessPolarBears;
@@ -25,7 +26,16 @@ class Turn{
     }
 
     public function checkScore(){
-        
+
+        $score = 0;
+        foreach($list as $element){
+            if($element == 1 || $element == 3 || $element == 5){
+                $score += 2;
+            }else{
+                $score++;
+            }
+        }
+        echo "<h1> Score is now:{$score}</h1>";
     }
 }
 ?>
