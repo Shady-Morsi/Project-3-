@@ -2,8 +2,11 @@
 namespace Project3;
 class Game{
     private DiceList $diceList;
-    private wrong $wrong;
-    private correct $correct;
+    private int $wrong;
+    private int $correct;
+    private int $resultIceHoles;
+    private int $resultPolarBears;
+    private int $resultpenguins;
     private TurnList $turnList;
 
 
@@ -17,6 +20,40 @@ class Game{
         }
     }
 
+    public function drawCubes(){
 
+    }
+
+    public function result(){
+
+    }
+
+    public function getTurnList(){
+
+    }
+
+    public function addGuess(){
+
+    }
+
+    public function checkGuess(){
+
+    }
+
+    public function getGameTurns(){
+
+    }
+
+    public function getWrongAnswers(){
+
+    }
+
+    public function getAnswer(){
+
+    }
+
+    public function getScore(){
+
+    }
 }
 ?>

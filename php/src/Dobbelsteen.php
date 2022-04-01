@@ -2,16 +2,30 @@
 namespace Project3;
 class Dobbelsteen {
 
-    private $iceHoles;
-    private $polarBears;
-    private $penguins;
-    public $number;
+    private int $iceHoles;
+    private int $polarBears;
+    private int $penguins;
+    private int $dobbelsteen;
+    public int $number;
 
+    public function dobbelsteen(){
 
-
+    }
 
     public function roll(){
         $this->number = rand(1,6);
+    }
+
+    public function geticeHoles(){
+        return $this->iceHoles;
+    }
+
+    public function getpolarBears(){
+        return $this->polarBears;
+    }
+
+    public function getpenguins(){
+        return $this->penguins;
     }
 
     public function draw(){
@@ -29,5 +43,7 @@ class Dobbelsteen {
             echo '<img src="../assets/dice-6.png">';
         }
     }
+
+
 }
 ?>

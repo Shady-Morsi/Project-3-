@@ -1,13 +1,15 @@
 <?php
-
+namespace Project3;
 class Turn{
 
-    private GuessIceHoles $guessIceHoles;
-    private GuessPolarBears $guessPolarBears;
-    private GuessPenguins $guessPenguins;
+    private int $guessIceHoles;
+    private int $guessPolarBears;
+    private int $guessPenguins;
 
-    public function __construct(){
-
+    public function __construct(int $guessIceHoles = 2, int $guessPolarBears = 5, int $guessPenguins = 6){
+        $this->guessIceHoles = $guessIceHoles;
+        $this->guessPolarBears = $guessPolarBears;
+        $this->guessPenguins = $guessPenguins;
     }
 
     public function getGuessIceHoles(){
@@ -23,7 +25,7 @@ class Turn{
     }
 
     public function checkScore(){
-
+        
     }
 }
 ?>
