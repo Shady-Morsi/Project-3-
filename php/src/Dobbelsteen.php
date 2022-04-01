@@ -2,52 +2,47 @@
 namespace Project3;
 class Dobbelsteen {
 
-    private int $iceHoles;
+    private int $iceHoles ;
     private int $polarBears;
     private int $penguins;
-    private int $dobbelsteen;
     public int $number;
     private $laatstGegenereerd;         // laatste getal dat werd gegenereerd
     private $fp;
 
     public function __construct() {
         $this->fp = fopen("logboek.txt", "a");
+        $this->iceHoles = 1;
+        $this->polarBears = 3;
+        $this->penguins = 5;
     }
 
     public function __destruct() {
         fclose($this->fp);
     }
 
-    public function dobbelsteen(){
-
+    public function getDice($grootte){
+        return "<img width='$grootte' src='../assets/" . rand(1, 6) . ".png'>";
     }
 
-    public function getDice(){
 
-    }
 
-    public function roll(){
-        $this->number = rand(1,6);
-    }
-
-    public function geticeHoles(){
+    public function getIceHoles(){
         return $this->iceHoles;
     }
 
-    public function getpolarBears(){
+    public function getPolarBears(){
         return $this->polarBears;
     }
 
-    public function getpenguins(){
+    public function getPenguins(){
         return $this->penguins;
     }
 
-    public function draw($maxAmount=8, $grootte=50){
+    public function draw($maxAmount=8, $grootte=70){
         $rnd = rand(3, $maxAmount);
 
         for($i = 0; $i < $rnd; $i++) {
-            echo
-                "<img width='$grootte' src='assets/".$this->getRandomNumber(1, 6).".png'>";
+            echo $this->getDice($grootte);
         }
     }
 

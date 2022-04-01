@@ -3,6 +3,10 @@ namespace Project3;
 class GameList{
     private array $games = [];
 
+    public function __construct(){
+
+    }
+
     public function addGame(Game $game){
         $this->games[] = $game;
     }

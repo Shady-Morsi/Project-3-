@@ -1,12 +1,17 @@
 <?php
 namespace Project3;
+include "GameList.php";
+include "Dobbelsteen.php";
+include "HintList.php";
+include "Hint.php";
+
 class Play{
     private string $name;
-    private GameList $gameList;
-    private HintList $hintList;
+    private $gameList = [];
+    private $hintList = [];
 
     public function __construct(){
-        $this->gameList = new GameList();
+        $this->gameList[] = new GameList();
     }
 
     public function reset(){
@@ -14,7 +19,9 @@ class Play{
     }
 
     public function setHints(Hint $hint){
-        $this->hintList->addHint($hint);
+        $tijdelijk = new HintList();
+        $this->hintList[]= $tijdelijk->addHint($hint);
+//        echo "<pre>".print_r($this>hintList, true)."</pre>";
     }
 
     public function setPlayerName(string $name){
@@ -32,16 +39,16 @@ class Play{
 
     }
 
-    public function draw(){
-
+    public function draw($objDobbelsteen){
+        $objDobbelsteen->draw();
     }
 
-    public function getHint(Hint $hint){
-        return $this->hintList->$hint;
+    public function getHint($indexNumber){
+        return $this->hintList[$indexNumber];
     }
 
     public function getPreviousGames(){
-        return end(GameList::class->games);
+
     }
 
     public function getAnswer(){
@@ -52,4 +59,6 @@ class Play{
 
     }
 }
+$probeer = new Play();
+$probeer->setHints(new Hint("hallo wereld"));
 ?>

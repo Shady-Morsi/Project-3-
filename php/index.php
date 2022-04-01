@@ -72,9 +72,10 @@ if(isset($_SESSION['play'])){
 
 <?php
 
-if(isset($_POST['dice'])){
+if(isset($_POST['btnAantal'])){
     $game = new Game($_POST['dice']);
     $play->addGame($game);
+
 }
 elseif(isset($_POST['name'])){
     $play->setPlayerName($_POST['name']);
@@ -82,9 +83,17 @@ elseif(isset($_POST['name'])){
 <form action="" method="post">
     <div class="mb-3">
         <label for="exampleInputDice" class="form-label">Hoeveel dobbelstenen?</label>
-        <input type="number" min="3" max="8" class="form-control" id="exampleInputDice" name="dice">
+<!--        <input type="number" min="3" max="8" class="form-control" id="exampleInputDice" name="dice">-->
+        <select name="dice" id="dice">
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+            <option value='5'>5</option>
+            <option value='6'>6</option>
+            <option value='7'>7</option>
+            <option value='8'>8</option>
+        </select>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button name="btnAantal" type="submit" class="btn btn-primary">Submit</button>
 </form>
 <?php
 }elseif(isset($_POST['start'])) {
