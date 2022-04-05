@@ -5,7 +5,6 @@ class Dobbelsteen {
     private int $iceHoles ;
     private int $polarBears;
     private int $penguins;
-    public int $number;
     private $laatstGegenereerd;         // laatste getal dat werd gegenereerd
     private $fp;
 

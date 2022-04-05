@@ -29,7 +29,7 @@ class Game{
     }
 
     public function getTurnList(){
-
+        return $this->turnList;
     }
 
     public function addGuess(){
