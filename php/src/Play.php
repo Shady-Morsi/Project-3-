@@ -4,6 +4,7 @@ include "GameList.php";
 include "Dobbelsteen.php";
 include "HintList.php";
 include "Hint.php";
+include "Turn.php";
 
 class Play{
     private string $name;
@@ -35,8 +36,8 @@ class Play{
 
     }
 
-    public function checkScore(){
-
+    public function checkScore($objTurn){
+        $objTurn->checkScore();
     }
 
     public function draw($objDobbelsteen){
